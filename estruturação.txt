@@ -1,0 +1,21 @@
+npm init -y
+npm install express
+npm install nodemon
+alterar script "start" para "nodemon server.js"
+npm install nunjucks
+instalar pluguin de nunjucks template e alterar extensao dos arquivos html para .njk
+Para que o compilador interprete as palavras chaves nunjucks e html padrao, eh preciso alterar as configuracoes do vsCode: 
+	cmd: ctrl+shift+p
+	pesquisar "settings" e abrir o arquivo "settings.json"
+	adicionar codigo na descricao do pluguin sobre emmet:
+	    "emmet.includeLanguages": {
+        	"njk": "html"
+	    },
+
+npm install browser-sync npm-run-all -D
+browser-sync faz reload automatico ao alterar arquivos
+e npm-run-all roda servicos simultaneos (scripts, ex npm start)
+
+npm install method-override dependencia utilizada para sobrepor verbo PUT em cima do POST
+
+Para comunicar com o PostgreSQL, precisa da dependencia: npm install pg 

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/admin/layout.css">
+     <script src="https://kit.fontawesome.com/b5d13338b5.js" crossorigin="anonymous"></script>
+    {% block head%}
+
+    <title>Foodfy</title>
+    
+    {% endblock %}
+
+</head>
+<body>
+    <header class="container">
+        <aside></aside>
+        <nav class="navbar">
+            <ul class="navbar-ul">
+                <li class="navbar-items">
+                    <a href="/"> <span class="logo"><img src="/img/logo2.png" alt=""></span></a>
+                </li>
+            </ul>                
+        </nav>
+        <aside></aside>
+    </header>
+
+    <section class="container">
+        
+        <aside></aside><!-- coluna lateral vazia -->
+        <div class="content">
+            <main>
+            {% block content %}
+
+            {% endblock %}
+            </main>
+        </div>
+        <aside></aside> <!-- coluna lateral vazia -->
+    </section>
+
+    <footer>
+        <p class="footer-text">Todos direitos reservados, receitas Foodfy</p>
+    </footer>
+</body>
+</html>

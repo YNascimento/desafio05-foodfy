@@ -1,0 +1,102 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap";
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.content-box{
+    display: block;
+    box-sizing: border-box;
+    margin: 32px 0;
+    color: #111111;
+
+}
+
+.header-box{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.header-box div{
+    justify-self: right;
+    align-self: center;
+}
+
+.adminBtn{
+    text-align: right;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #6558c3;
+    padding: 8px 16px;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+}
+.adminBtn:hover{
+    opacity: 0.8;
+}
+
+.content-box h2{
+    margin: 16px 0;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.card{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4%;
+    margin: 16px 0;
+    align-items: center;
+}
+
+.card img{
+    max-height: 120px;
+    max-width: 240px;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+}
+
+.card h4{
+    display: block;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 400;
+}
+
+.card small{
+    font-size: 14px;
+    font-weight: 400;
+    color: #777777;
+    margin: 2% 0 4%;
+    display: block;
+}
+
+.card a{
+    font-family: 'Roboto', sans-serif;
+    padding: 2px 4px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    color: #6558c3;
+    text-decoration: none;
+    border: 1px solid transparent;
+}
+.card a:hover{
+    color: #423892;
+    border: 1px solid #423892;
+    border-radius: 4px;
+}

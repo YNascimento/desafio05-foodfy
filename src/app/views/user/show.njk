@@ -1,0 +1,50 @@
+{% extends "user/layout.njk" %}
+
+{% block head %}
+
+    <title>{{recipe.title}}</title>
+    <link rel="stylesheet" href="/user/show.css">
+
+{% endblock %} 
+
+{% block content %}
+    <div class="details-container">
+        <div class="presentation-box">
+            <img class="presentation-img" src="{{recipe.image}}" alt="{{recipe.title}}">
+            <h1 class="details-h1">{{recipe.title}}</h1>
+            <small class="presentation-author">por {{recipe.author}}</small>
+        </div>
+        
+        <div class="details-box">
+            <h2 class="details-h2">Ingredientes</h2>
+            <small><a id="show-ingredients" class="show-link hide">MOSTRAR</a></small>
+            <small><a id="hide-ingredients" class="hide-link">ESCONDER</a></small>
+            <ul id="ingredients-ul" class="details-list">
+                {%for ingredient in recipe.ingredients %}
+                    <li>{{ingredient}}</li>
+
+                {% endfor %}
+            </ul>   
+        </div>
+
+        <div class="details-box">
+            <h2 class="details-h2">Modo de Preparo</h2>
+            <small><a id="show-preparation" class="show-link hide" >MOSTRAR</a></small>
+            <small><a id="hide-preparation" class="hide-link">ESCONDER</a></small>
+            <ul id="preparation-ul" class="details-list">
+                {%for preparation in recipe.preparation %}
+                    <li>{{preparation}}</li>
+
+                {% endfor %}
+            </ul>   
+        </div>
+
+        <div class="details-box">
+            <h2 class="details-h2">Informações Adicionais</h2>
+            <small><a id="show-extrainfo" class="show-link hide">MOSTRAR</a></small>
+            <small><a id="hide-extrainfo" class="hide-link">ESCONDER</a></small>
+            <p id="extrainfo-p" class="details-p">{{recipe.information}}</p>
+        </div>
+    </div>
+    <script src="/user/details.js"></script>
+{% endblock %} 

@@ -1,0 +1,212 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap";
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body{
+    position: relative;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    color: #111111;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr; 
+}
+
+/*********** NAVBAR **************/
+
+.navbar{
+    margin: 20px 0;
+}
+
+.navbar-ul{
+    list-style: none;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 19px;
+    color: #111111;
+
+    justify-content: center;
+    align-content: center;
+}
+
+.navbar-ul li{
+    display: inline;
+    margin-right: 2%;
+}
+
+.logo{
+    margin-right: 8.7%;
+}
+
+.navbar-ul li a{
+    text-decoration: none;
+    color: #111111;
+}
+
+.navbar-ul .active{
+    font-weight: 700;
+}
+
+.navbar-ul li a:hover{
+    font-weight: 700;
+}
+
+/********** MAIN BANNER ***********/
+
+.banner{
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr;
+    padding: 6%;
+    background: #FBDFDB;
+    border-radius: 30px;
+}
+
+.banner-text{
+    display: block;
+    margin: 80px 30px;
+    text-align: left;
+}
+
+.banner-text h1{
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38px;
+    margin-bottom: 5px;
+}
+
+.banner-text p{
+    font-size: 18px;
+    line-height: 28px;
+    color: #000000;
+    opacity: 0.7;
+}
+
+.banner-img{
+    margin:auto;
+    position: absolute;
+    right: 7%;
+    top: 24%;
+}
+
+/********* RECEITAS *********/
+
+.receitas{
+    position: relative;
+    padding: 40px 0 60px;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 25px;
+    column-gap: 15px;
+}
+
+
+.card-img{
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.card h4{
+    display: block;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.card-author{
+    font-size: 14px;
+    font-weight: 400;
+    color: #777777;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+/********* MODAL *********/
+
+.modal-overlay{
+    background-color: rgba(0,0,0,0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal-overlay.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal{
+    background-color: #fff;
+    text-align: center;
+    margin: 20vh 30vw;
+    padding: 4vh 0;
+    border-radius: 16px;
+}
+
+.modal-img{
+    border-radius: 15px;
+    width: 90%;
+}
+
+.modal-title{
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.modal-author{
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 50px;
+
+    font-size: 18px;
+    font-weight: 400;
+    color: #777777;
+    text-align: center;
+}
+
+.modal-close{
+    font-size: 16px;
+    font-weight: 400;
+    color: #999999;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.modal-close:hover{
+    font-weight: 700;
+
+}
+
+/********* FOOTER *********/
+
+footer{
+    background-color: #eeeeee;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p{
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+    font-size: 14px;
+    color: #999999;
+    text-align: center;
+}

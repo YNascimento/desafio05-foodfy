@@ -1,0 +1,50 @@
+.input-box{
+    margin: 24px 0;
+}
+
+.input-title{
+    padding-bottom: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+}
+
+#preparations, #ingredients{
+    display: inline-block;
+    width: 100%;
+    margin: 8px 0;
+
+}
+
+.ingredient, .preparation{
+    margin: 4px 0;
+    position: relative;
+}
+
+.ingredient span, .preparation span{
+    position: absolute;
+    right: 0;
+    top:10px;
+    cursor: pointer;
+}
+
+.input-box button{
+    background-color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    color: #6558c3;
+    text-decoration: none;
+    margin: 4px 0;
+    display: block;
+    cursor: pointer;
+    outline: none;
+}
+
+.input-box input,.input-box textarea{
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    padding: 8px 4px;
+}
