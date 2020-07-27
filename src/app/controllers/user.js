@@ -26,5 +26,21 @@ exports.chefs = function(req,res){
     Chef.all(function(chefs){
         return res.render('user/chefs',{chefs})
     })
-
+}
+exports.busca = function(req,res){
+    let {filter, page,limit} = req.query
+    page = page || 1
+    limit = limit || 3
+    
+    let offset = limit*(page-1)
+    const params = {
+        filter, page, limit, offset, callback(recipes){
+            const pagination = {
+                total: Math.ceil(recipes[0].total/limit), //total pages
+                page
+            }
+            return res.render('user/filter', {recipes, pagination, filter})
+        }
+    }
+    Recipe.paginate(params)
 }

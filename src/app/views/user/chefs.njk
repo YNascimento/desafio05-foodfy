@@ -14,8 +14,8 @@
                 <h4>{{chef.name}}</h4>
                 <small class="presentation-author">
                     {{chef.total_recipes}}
-                    {% if chef.total_recipes > 1  %} receitas {%endif%}
-                    {% if chef.total_recipes <= 1  %} receita {%endif%}
+                    {% if chef.total_recipes != 1  %} receitas {%endif%}
+                    {% if chef.total_recipes == 1  %} receita {%endif%}
                 </small>
             </div>
         </div>

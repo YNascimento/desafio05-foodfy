@@ -1,0 +1,36 @@
+
+.receitas{
+    position: relative;
+    padding: 40px 0 60px;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 25px;
+    column-gap: 15px;
+}
+
+
+.card-img{
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.card h4{
+    display: block;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.card-author{
+    font-size: 14px;
+    font-weight: 400;
+    color: #777777;
+    margin-bottom: 15px;
+    cursor: pointer;
+}

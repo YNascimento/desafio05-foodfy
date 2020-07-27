@@ -23,35 +23,45 @@ body{
 
 .navbar{
     margin: 20px 0;
-}
-
-.navbar-ul{
-    list-style: none;
-    font-size: 16px;
-    font-weight: normal;
-    line-height: 19px;
-    color: #111111;
-
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 150px 80px 80px 80px 1fr;
     align-content: center;
 }
-
-.navbar-ul li{
-    display: inline;
-    margin-right: 2%;
-}
-
-.logo{
-    margin-right: 8.7%;
-}
-
 .navbar-links{
+    padding-top: 5px;
     text-decoration: none;
     color: #111111;
 }
-
-.navbar-ul li a:hover{
+.navbar-links:hover{
     font-weight: 700;
+}
+
+.navbar form{
+    justify-self: right;
+}
+
+.navbar form input{
+    padding: 8px 8px;
+    margin-right: 8px;
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 19px;
+    border: 1px solid #cccccc;
+}
+
+.navbar form button{
+    padding: 8px 24px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    background-color: #6558c3;
+    color: #eee;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.navbar form button:hover{
+    opacity: 0.8;
 }
 
 /********* FOOTER *********/

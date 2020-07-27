@@ -19,14 +19,14 @@
         <div class="content">
             <header>
                 <nav class="navbar">
-                    <ul class="navbar-ul">
-                        <li class="navbar-items">
-                            <a href="/"> <span class="logo"><img src="/img/logo.png" alt=""></span></a>
-                        </li>
-                        <li class="navbar-items"><a class="navbar-links" href="/about">Sobre</a></li>
-                        <li class="navbar-items"><a class="navbar-links" href="/recipes">Receitas</a></li>
-                        <li class="navbar-items"><a class="navbar-links" href="/chefs">Chefs</a></li>
-                    </ul>                
+                    <a href="/"><span class="logo"><img src="/img/logo.png" alt=""></span></a>
+                    <a class="navbar-links" href="/about">Sobre</a>
+                    <a class="navbar-links" href="/recipes">Receitas</a>
+                    <a class="navbar-links" href="/chefs">Chefs</a>
+                    <form action="/recipes/busca" method="GET">
+                        <input type="text" name="filter" placeholder="Buscar uma receita" value="{{filter}}">
+                        <button type="submit">Buscar</button>
+                    </form>
                 </nav>
             </header>
 

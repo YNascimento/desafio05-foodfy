@@ -10,6 +10,7 @@ routes.get('/recipes', user.recipes)//receitas
 routes.get('/about', user.about)//sobre
 routes.get('/recipe/:id', user.show) //detalhes receita
 routes.get('/chefs', user.chefs)//chefs
+routes.get('/recipes/busca',user.busca) //filtro
 
 
 //ADMIN - RECIPES
