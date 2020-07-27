@@ -1,0 +1,141 @@
+.details-container{
+    padding-bottom: 50px;
+}
+
+.edit-box{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+
+.edit-box div{
+    justify-self: right;
+    align-self: center;
+}
+
+.adminBtn{
+    text-align: right;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #6558c3;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+.adminBtn:hover{
+    opacity: 0.8;
+}
+
+.presentation-box{
+    margin: 20px 0 50px;
+    text-align: center;
+}
+
+.presentation-img{
+    margin-bottom: 50px;
+    border-radius: 15px;
+    max-width: 400px;
+    width: auto;
+    height: 300px;
+    border: 4px solid #6558c3;
+    border-radius: 50%;
+}
+
+.presentation-author{
+    margin-bottom: 25px;
+    font-size: 20px;
+    line-height: 24px;
+    color: #777777;
+}
+.details-box{
+    padding-top: 25px;
+    box-sizing: border-box;
+}
+
+.details-h1{
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 42px;
+}
+
+.details-h2{
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 700;
+    color: #111111;
+    display: inline;
+}
+
+.details-p{
+    margin: 20px 0 40px;
+    font-size: 18px;
+    line-height: 28px;
+    color: #444444;
+}
+
+.details-list{
+    margin: 20px 0 40px;
+    list-style: none;
+    color: #444444;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+/* RECEITAS */
+
+.cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 48px;
+}
+
+.card{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4%;
+    margin: 16px 0;
+    align-items: center;
+}
+
+.card img{
+    max-height: 120px;
+    max-width: 240px;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+}
+
+.card h4{
+    display: block;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 400;
+}
+
+.card small{
+    font-size: 14px;
+    font-weight: 400;
+    color: #777777;
+    margin: 2% 0 4%;
+    display: block;
+}
+
+.card a{
+    font-family: 'Roboto', sans-serif;
+    padding: 2px 4px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    color: #6558c3;
+    text-decoration: none;
+    border: 1px solid transparent;
+}
+.card a:hover{
+    color: #423892;
+    border: 1px solid #423892;
+    border-radius: 4px;
+}

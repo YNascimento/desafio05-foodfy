@@ -2,50 +2,44 @@
 
 {% block head %}
 
-    <title>{{recipe.title}}</title>
-    <link rel="stylesheet" href="/admin/show.css">
+    <title>{{chef.name}}</title>
+    <link rel="stylesheet" href="/admin/chefs/show.css">
 
 {% endblock %} 
 
 {% block content %}
     <div class="details-container">
         <div class="edit-box">
-            <h2 class="details-h2">Receita: {{recipe.title}}</h2>
+            <h2 class="details-h2">Chef: {{chef.name}}</h2>
             <div>
-                <a class="adminBtn" href="/admin/recipes/{{recipe.id}}/edit">Editar Receita</a>
+                <a class="adminBtn" href="/admin/chefs/{{chef.id}}/edit">Editar Chef</a>
             </div>
         </div>
 
         <div class="presentation-box">
-            <img class="presentation-img" src="{{recipe.image}}" alt="{{recipe.title}}">
-            <h1 class="details-h1">{{recipe.title}}</h1>
-            <small class="presentation-author">por {{recipe.author}}</small>
-        </div>
-        
-        <div class="details-box">
-            <h2 class="details-h2">Ingredientes</h2>
-            <ul id="details-ul" class="details-list">
-                {%for ingredient in recipe.ingredients %}
-                    <li>- {{ingredient}}</li>
-
-                {% endfor %}
-            </ul>   
+            <img class="presentation-img" src="{{chef.avatar_url}}" alt="{{chef.name}}">
+            <h1 class="details-h1">{{chef.name}}</h1>
+            <small class="presentation-author">
+                {{total_recipes.total}}
+                {% if total_recipes.total > 1  %} receitas {%endif%}
+                {% if total_recipes.total == 1  %} receita {%endif%}
+            </small>
         </div>
 
-        <div class="details-box">
-            <h2 class="details-h2">Modo de Preparo</h2>
-            <ul id="details-ul" class="details-list">
-                {%for preparation in recipe.preparation %}
-                    <li>- {{preparation}}</li>
-
-                {% endfor %}
-            </ul>   
+        <h2 class="details-h2">Receitas</h2>
+        <div class="cards">
+            {% for recipe in recipes %}
+            <div class="card">
+                <img src="{{recipe.image}}" alt="">
+                <div>
+                    <h4>{{recipe.title}}</h4>
+                    <small>Por {{chef.name}}</small>
+                    <a href="/admin/recipes/{{recipe.id}}">Visualizar</a>
+                </div>
+            </div>
+            {% endfor %}
         </div>
 
-        <div class="details-box">
-            <h2 class="details-h2">Informações Adicionais</h2>
-            <p id="extrainfo-p" class="details-p">{{recipe.information}}</p>
-        </div>
     </div>
 
 {% endblock %} 

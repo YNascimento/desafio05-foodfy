@@ -1,0 +1,24 @@
+{% extends "user/layout.njk" %}
+
+{% block head %}
+    <title>Foodfy - Receitas</title>
+    <link rel="stylesheet" href="/user/chefs.css">
+{% endblock %} 
+
+{% block content %}
+    <div class="cards">
+        {% for chef in chefs %}
+        <div class="card">
+            <img src="{{chef.avatar_url}}" alt="">
+            <div>
+                <h4>{{chef.name}}</h4>
+                <small class="presentation-author">
+                    {{chef.total_recipes}}
+                    {% if chef.total_recipes > 1  %} receitas {%endif%}
+                    {% if chef.total_recipes <= 1  %} receita {%endif%}
+                </small>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %} 

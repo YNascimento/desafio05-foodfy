@@ -3,14 +3,24 @@
     <div class="input-title">Titulo da Receita</div>
     <input type="text" name="title" value="{{recipe.title}}">
 </div>
+
 <div class="input-box"> {# AUTHOR #}
-    <div class="input-title">Autor da receita</div>
-    <input type="text" name="author" value="{{recipe.author}}">
+    <div class="input-title">Chef</div>
+    <select name="chef">
+        {% for chef in chefOptions %}
+        <option value="{{chef.id}}"
+            {% if recipe.chef_id == chef.id %} selected {%endif%}>
+            {{chef.name}}
+        </option>
+        {% endfor %}
+    </select>
 </div>
+
 <div class="input-box"> {# IMG #}
     <div class="input-title">Imagem da receita</div>
     <input type="url" name="image" value="{{recipe.image}}">
 </div>
+
 <div class="input-box"> {# INGREDIENTS #}
     <div class="input-title">Ingredientes</div>
     <div id="ingredients">
@@ -50,6 +60,7 @@
     </div>
     <button id="addPreparation" type="button">Adicionar novo passo</button>
 </div>
+
 <div class="input-box"> {# EXTRA INFO #}
     <div class="input-title">Informações adicionais</div>
     <textarea name="information" value="{{recipe.information}}" cols="30" rows="10">{{recipe.information}}</textarea>

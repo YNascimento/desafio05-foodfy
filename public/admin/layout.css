@@ -34,34 +34,16 @@ header{
 
 .navbar{
     margin: 20px 0;
-}
-
-.navbar-ul{
-    list-style: none;
-    font-size: 16px;
-    font-weight: normal;
-    line-height: 19px;
-    color: #111111;
-
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 150px 80px 80px;
     align-content: center;
 }
-
-.navbar-ul li{
-    display: inline;
-    margin-right: 2%;
-}
-
-.logo{
-    margin-right: 8.7%;
-}
-
 .navbar-links{
+    padding-top: 5px;
     text-decoration: none;
-    color: #111111;
+    color: #eee;
 }
-
-.navbar-ul li a:hover{
+.navbar-links:hover{
     font-weight: 700;
 }
 

@@ -3,26 +3,23 @@
 {% block head %}
 
     <title>Admin - Nova Receita</title>
-    <link rel="stylesheet" href="/admin/create.css">
-    <link rel="stylesheet" href="/admin/fields.css">
+    <link rel="stylesheet" href="/admin/chefs/create.css">
+    <link rel="stylesheet" href="/admin/chefs/fields.css">
 
 {% endblock %} 
 
 {% block content %}
 
-    <form class="create-content" action="/admin/recipes" method="post">
+    <form class="create-content" action="/admin/chefs" method="post">
         <section class="header-box">
-            <h3>Criando receita</h3>
+            <h3>Criando Chef</h3>
             <div>
-                <button class="adminBtn" type="submit">Salvar Receita</button>
+                <button class="adminBtn" type="submit">Salvar Chef</button>
             </div>
         </section>
 
         <section class="form-box">
-            {% include 'admin/fields.njk'%}
+            {% include 'admin/chefs/fields.njk'%}
         </section>
     </form>
-
-<script src="/admin/fields.js"></script>
-
 {% endblock %} 

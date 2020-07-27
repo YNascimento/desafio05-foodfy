@@ -1,5 +1,4 @@
 const Recipe = require('../models/Recipe')
-const Chef = require('../models/Chef')
 const {date} = require('../../lib/util')
 
 exports.index = function(req,res){
@@ -9,7 +8,10 @@ exports.index = function(req,res){
     })
 }
 exports.create = function(req,res){
-    return res.render('admin/recipes/create')
+
+    chefOptions(function(options){
+        return res.render('admin/recipes/create', {chefOptions : options})
+    })
 }
 exports.show = function(req,res){
 
@@ -24,9 +26,9 @@ exports.edit = function(req,res){
     Recipe.find(req.params.id,function(recipe){
         if(!recipe) return res.send("Recipe not found")
 
-        recipe.created_at = date(recipe.created_at).format
-
-        return res.render('admin/recipes/edit',{recipe})
+        chefOptions(function(options){
+            return res.render('admin/recipes/edit', {chefOptions : options, recipe})
+        })
     })
 }
 exports.post = function(req,res){
@@ -43,7 +45,7 @@ exports.post = function(req,res){
     
 }
 exports.put = function(req,res){
-
+    
     //check if number of fields on req.body equals number on data.recipes
     if( Object.keys(req.body).length != 7)  return res.send(req.body)
 

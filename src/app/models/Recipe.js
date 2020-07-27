@@ -27,7 +27,7 @@ module.exports = {
 
         const values = [
             data.image,
-            data.chef_id,
+            data.chef,
             data.title,
             data.ingredients,
             data.preparation,
@@ -65,7 +65,7 @@ module.exports = {
 
         const values = [
             data.image,
-            data.chef_id,
+            data.chef,
             data.title,
             data.ingredients,
             data.preparation,
@@ -83,6 +83,12 @@ module.exports = {
         db.query(`DELETE FROM recipes WHERE id = $1`, [id],function(err,results){
             if(err) throw `delete function error ${err}`
             callback()
+        })
+    },
+    chefOptions(callback){
+        db.query(`SELECT name, id FROM chefs ORDER BY name ASC`, function(err,results){
+            if(err) throw `cheOptions error ${err}`
+            callback(results.rows)
         })
     },
     paginate(params){},
