@@ -7,9 +7,21 @@ exports.index = function(req,res){ //index
     })
 }
 exports.recipes = function(req,res){//receitas
-    Recipe.all(function(recipes){
-        return res.render('user/recipes',{recipes})
-    })
+    let {filter, page,limit} = req.query
+    page = page || 1
+    limit = limit || 2
+    
+    let offset = limit*(page-1)
+    const params = {
+        filter, page, limit, offset, callback(recipes){
+            const pagination = {
+                total: Math.ceil(recipes[0].total/limit), //total pages
+                page
+            }
+            return res.render('user/recipes', {recipes, pagination, filter})
+        }
+    }
+    Recipe.paginate(params)
 }
 exports.about = function(req,res){//sobre
     return res.render('user/about')

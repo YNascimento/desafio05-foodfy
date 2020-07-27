@@ -1,0 +1,23 @@
+/* PAGINATION */
+
+.pagination{
+    text-align: center;
+    margin-top: 48px;
+}
+
+.pagination a{
+    text-decoration: none;
+    color: #111111;
+    font-size: 18px;
+    margin-right: 12px;
+}
+.pagination a:hover{
+    font-weight: 700;
+    border-bottom: 1px solid #111111;
+}
+
+.pagination span{
+    color: #111111;
+    font-size: 18px;
+    margin-right: 12px;
+}

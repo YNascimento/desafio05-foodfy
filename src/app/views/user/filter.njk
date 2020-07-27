@@ -3,6 +3,7 @@
 {% block head %}
     <title>Foodfy - Receitas</title>
     <link rel="stylesheet" href="/user/filter.css">
+    <link rel="stylesheet" href="/user/paginate.css">
 {% endblock %} 
 
 {% block content %}
@@ -18,5 +19,8 @@
         {% endfor %}
     </div>
 
-<script src="user/recipes.js"></script>
+    <div class="pagination" data-page={{pagination.page}} data-total={{pagination.total}} data-filter={{filter}}></div>
+
+<script src="/user/paginate.js"></script>
+<script src="/user/recipes.js"></script>
 {% endblock %} 

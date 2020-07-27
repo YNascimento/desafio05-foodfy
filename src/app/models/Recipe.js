@@ -7,7 +7,7 @@ module.exports = {
     all(callback){
         db.query(`SELECT recipes.*, chefs.name as chef_names FROM recipes 
         LEFT JOIN chefs ON (recipes.chef_id = chefs.id)
-        order by chef_names`,
+        order by chef_names LIMIT 6`,
         function(err, results){
 
             if(err) throw `all function error ${err}`
