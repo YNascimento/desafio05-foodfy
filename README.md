@@ -3,7 +3,7 @@
 </h1>
 
 <h3 align="center">
-  Desafios Módulo 3 - Iniciando no Back-end
+  Desafios Módulo 5: Persistindo dados da aplicação
 </h3>
 
 <blockquote align="center">“Faça seu melhor, mas sempre com prazo de entrega!”</blockquote>
@@ -28,10 +28,11 @@
 
 ## :rocket: Desafios
 
-- [Primeiro servidor](desafios/03-1-primeiro-servidor.md)
-- [Arquivos nunjucks e dados dinâmicos](desafios/03-2-nunjucks-e-dados-dinamicos.md)
-- [Página de descrição do curso](desafios/03-3-pagina-descricao-curso.md)
-- [Refatorando Foodfy](desafios/03-refatorando-foodfy.md)
+- [Refatorando aplicação e configurando o BD](desafios/05-1-refatorando-aplicacao.md)
+- [Interagindo com o BD](desafios/05-2-interagindo-bd.md)
+- [Relacionamentos e filtros no BD](desafios/05-3-relacionamentos-filtros-bd.md)
+- [Paginação de resultados no BD](desafios/05-4-paginacao-bd.md)
+- [Persistindo dados no Foodfy](desafios/05-persistindo-dados-foodfy.md)
 
 ## :calendar: Entrega
 
